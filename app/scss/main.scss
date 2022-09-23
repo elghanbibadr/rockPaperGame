@@ -38,12 +38,17 @@
         color: $Score-Text;
     }
     @include desktop{
+        &{
+            width: 80%;
+            margin-inline: auto;
+        }
         &__title{
             font-size: 3.5rem;
         }
    
         &__score-box{
          padding-top: 2rem;
+         padding-inline: 3.5rem;
         }
 
         &__score-number{
