@@ -61,4 +61,11 @@ a{
         pointer-events: none;
        
       }
+      &::after{
+        content: '';
+        height: 1rem;
+        width: 50%;
+        background-color:  hsla(238, 48%, 15%, 0.649);
+        position: absolute;
+      }
 }
