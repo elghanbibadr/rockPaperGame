@@ -3,60 +3,38 @@
 @import './partiels/mixins';
 @import './partiels/typogprahy';
 @import './partiels/reset';
+@import './partiels/header';
 
-
-.header{
-    border: 3px solid $Header-Outline;
-    padding: 2rem;
-    border-radius: 10px;
-    margin: 2.2rem;
-    display: flex;
-    justify-content: space-between;
-
-    &__title{
-        font-size: 2.3rem;
+main{
+    margin: 6rem 3rem;
+}
+.step{
+    position: relative;
+     height: 14rem;
+     width: 14rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+ 
+    img{
+        height: 5rem;
+        width: 5rem;
     }
-
-    &__score-box{
-        background-color: white;
-        padding: 1rem 2rem;
-        border-radius: 6px;
-        text-align: center;
-        
-    }
-
-    &__score-number{
-        display: inline-block;
-        margin-top: 1rem;
-        color: black;
-        font-size: 3.2rem;
-        font-weight: bold;
-    }
-
-    &__score-title{
-        font-size: 1.7rem;
-        color: $Score-Text;
-    }
-    @include desktop{
-        &{
-            width: 80%;
-            margin-inline: auto;
-        }
-        &__title{
-            font-size: 3.5rem;
-        }
-   
-        &__score-box{
-         padding-top: 2rem;
-         padding-inline: 3.5rem;
-        }
-
-        &__score-number{
-         font-size: 3.6rem;
-        }
-        
-        &__score-title{
-         font-size: 2.4rem;
-        }
-    }
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        padding: 18px; /* control the border thickness */
+        background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+        -webkit-mask: 
+          linear-gradient(#fff 0 0) content-box, 
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+                mask-composite: exclude;
+        pointer-events: none;
+       
+      }
 }
