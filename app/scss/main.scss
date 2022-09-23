@@ -8,33 +8,27 @@
 main{
     margin: 6rem 3rem;
 }
-.step{
-    position: relative;
-     height: 14rem;
-     width: 14rem;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    border-radius: 50%;
- 
-    img{
-        height: 5rem;
-        width: 5rem;
-    }
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 50%;
-        padding: 18px; /* control the border thickness */
-        background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-        -webkit-mask: 
-          linear-gradient(#fff 0 0) content-box, 
-          linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-                mask-composite: exclude;
-        pointer-events: none;
-       
-      }
+
+
+.steps-container{
+  text-align: center;
 }
+
+.steps__paper::before{
+  border-color:hsl(230, 89%, 65%);
+  background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+
+}
+
+.steps__scissors::before{
+  border-color:hsl(39, 89%, 49%);
+  background-image: linear-gradient(hsl(39, 89%, 49%),  hsl(40, 84%, 53%));
+
+}
+
+.steps__rock::before{
+  border-color: hsl(349, 71%, 52%);
+  background-image: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+
+}
+

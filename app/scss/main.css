@@ -33,6 +33,45 @@ a {
   font-family: inherit;
 }
 
+.step {
+  position: relative;
+  height: 16rem;
+  width: 16rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.step img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.step::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 18px;
+  /* control the border thickness */
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  border-style: groove;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
 .header {
   border: 3px solid #606e85;
   padding: 2rem;
@@ -94,41 +133,25 @@ main {
   margin: 6rem 3rem;
 }
 
-.step {
-  position: relative;
-  height: 14rem;
-  width: 14rem;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: white;
-  border-radius: 50%;
+.steps-container {
+  text-align: center;
 }
 
-.step img {
-  height: 5rem;
-  width: 5rem;
-}
-
-.step::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  padding: 18px;
-  /* control the border thickness */
+.steps__paper::before {
+  border-color: #5671f5;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
   background-image: linear-gradient(#4865f4, #5671f5);
-  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
+}
+
+.steps__scissors::before {
+  border-color: #ec9e0e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+  background-image: linear-gradient(#ec9e0e, #eca922);
+}
+
+.steps__rock::before {
+  border-color: #dc2e4e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+  background-image: linear-gradient(#dc2e4e, #dd405d);
 }
 /*# sourceMappingURL=main.css.map */
