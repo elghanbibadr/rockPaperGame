@@ -12,6 +12,7 @@ main{
 
 .steps-container{
   text-align: center;
+  
 }
 
 .steps__paper::before{
@@ -36,10 +37,10 @@ main{
 }
 
 .steps__rock::after{
-  top: -12%;
+  top: -4%;
   left: -10%;
-  z-index: -555;
-  transform: rotate(55deg);
+  z-index: -33333;
+  transform: rotate(60deg);
 }
 
 .steps__rock::before{
@@ -48,3 +49,30 @@ main{
 
 }
 
+// counter container
+
+.counter{
+  background-color: $Dark-Text;
+  height: 16rem;
+  width: 16rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__number{
+    font-size: 4rem;
+  }
+}
+
+
+// resuable classes
+.hidden{
+  display: none;
+}
+
+.flexCenter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

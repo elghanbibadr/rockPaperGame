@@ -36,6 +36,7 @@ a {
 .step {
   position: relative;
   height: 16rem;
+  z-index: 99999;
   width: 16rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -50,6 +51,15 @@ a {
   border-radius: 50%;
   margin: 2rem;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.step:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .step img {
@@ -170,16 +180,52 @@ main {
 }
 
 .steps__rock::after {
-  top: -12%;
+  top: -4%;
   left: -10%;
-  z-index: -555;
-  -webkit-transform: rotate(55deg);
-          transform: rotate(55deg);
+  z-index: -33333;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
 }
 
 .steps__rock::before {
   border-color: #dc2e4e;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
   background-image: linear-gradient(#dc2e4e, #dd405d);
+}
+
+.counter {
+  background-color: #3b4363;
+  height: 16rem;
+  width: 16rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.counter__number {
+  font-size: 4rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.flexCenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
