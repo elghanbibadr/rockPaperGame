@@ -12,6 +12,10 @@ main{
 
 .steps-container{
   text-align: center;
+  @include desktop{
+    max-width: 50rem;
+    margin-inline: auto;
+  }
   
 }
 
@@ -22,6 +26,7 @@ main{
 }
 .steps__paper::after{
   left: 100%;
+  z-index: -7999777777;
 }
 
 .steps__scissors::after{
@@ -39,7 +44,7 @@ main{
 .steps__rock::after{
   top: -4%;
   left: -10%;
-  z-index: -33333;
+   z-index: -355553333;
   transform: rotate(60deg);
 }
 
@@ -49,6 +54,9 @@ main{
 
 }
 
+.step.hidePseudo::after{
+  display: none;
+}
 // counter container
 
 .counter{
@@ -68,11 +76,34 @@ main{
 
 // resuable classes
 .hidden{
-  display: none;
+  display: none !important;
 }
 
 .flexCenter{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+
+.columnFlex{
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.result-box{
+   h2,strong{
+     font-size: 4rem !important;
+   }
+  button{
+    padding: 1.2rem  2rem ;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: $Score-Text;
+    border: 0;
+    cursor: pointer;
+    &:hover{
+      color: rgba(255, 0, 0, 0.794);
+    }
+  }
 }

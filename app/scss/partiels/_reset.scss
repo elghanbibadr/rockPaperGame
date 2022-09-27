@@ -72,4 +72,8 @@ a{
         background-color:  hsla(238, 48%, 15%, 0.649);
         position: absolute;
       }
+      @include desktop{
+        height: 20rem;
+        width: 20rem;
+      }
 }
