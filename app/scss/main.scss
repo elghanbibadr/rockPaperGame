@@ -18,7 +18,9 @@ main{
   }
   
 }
-
+.steps__paper,.steps__scissors,.steps__rock{
+  z-index: 8888888888;
+}
 .steps__paper::before{
   border-color:hsl(230, 89%, 65%);
   background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
@@ -26,12 +28,12 @@ main{
 }
 .steps__paper::after{
   left: 100%;
-  z-index: -7999777777;
+   z-index: -1;
 }
 
 .steps__scissors::after{
   top: 110%;
-  z-index: -33333;
+   z-index: -1;
   right: 50%;
   transform: rotate(-50deg);
 }
@@ -42,10 +44,14 @@ main{
 }
 
 .steps__rock::after{
-  top: -4%;
+  top: -7%;
   left: -10%;
-   z-index: -355553333;
+   z-index: -188888888;
   transform: rotate(60deg);
+  @include desktop{
+    top: -7%;
+    // width: 3rem;
+  }
 }
 
 .steps__rock::before{

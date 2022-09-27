@@ -26,7 +26,6 @@ function hideAllChoices(){
     return  choices.forEach(element=>{
       updateClass(element,true,'hidden');
       updateClass(element,true,'hidePseudo');
-        // element.classList.add('hidePseudo');
     });
 }
   

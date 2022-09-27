@@ -169,6 +169,10 @@ main {
   }
 }
 
+.steps__paper, .steps__scissors, .steps__rock {
+  z-index: 8888888888;
+}
+
 .steps__paper::before {
   border-color: #5671f5;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
@@ -177,12 +181,12 @@ main {
 
 .steps__paper::after {
   left: 100%;
-  z-index: -7999777777;
+  z-index: -1;
 }
 
 .steps__scissors::after {
   top: 110%;
-  z-index: -33333;
+  z-index: -1;
   right: 50%;
   -webkit-transform: rotate(-50deg);
           transform: rotate(-50deg);
@@ -195,11 +199,17 @@ main {
 }
 
 .steps__rock::after {
-  top: -4%;
+  top: -7%;
   left: -10%;
-  z-index: -355553333;
+  z-index: -188888888;
   -webkit-transform: rotate(60deg);
           transform: rotate(60deg);
+}
+
+@media screen and (min-width: 580px) {
+  .steps__rock::after {
+    top: -7%;
+  }
 }
 
 .steps__rock::before {
